@@ -1,0 +1,24 @@
+<header>
+    <div class="container">
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index')}}" id="planet-list">Planet list</a></li>
+                <li><a href="#" id="voting-statistics">Voting statistics</a></li>
+
+                {% if session.get('username') == None %}
+                    <li><a href="{{ url_for('register')}}" id="registration">Registration</a></li>
+                    <li><a href="{{ url_for('login')}}" id="login">Login</a></li>
+                    <li id="sign">You are signed out</li>
+
+                {% else %}
+
+                    <li><a href="{{ url_for('logout')}}" id="logout">Logout</a></li>
+                    <li id="sign">Logged in as {{session.get('username')}}</li>
+
+                {% endif %}
+            </ul>
+        </nav>
+
+    </div>
+</header>

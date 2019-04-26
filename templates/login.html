@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>api wars login</title>
+</head>
+
+<body>
+
+
+{% include 'navbar.html' %}
+
+    <div class="wrapper">
+
+        <form class="form-login" action="" method="post">
+            <h2 class="form-group">Log In</h2>
+            {%  if error == "not valid" %}
+                <h3 class="form-group">Username or password is invalid!</h3>
+            {% endif %}
+            <div class="form-group">
+                <input type="text" class="form-control" name="username" aria-describedby="username" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+
+            <button type="submit" class="form-group">Login</button>
+            <div class="login-or">
+                <hr class="hr-or">
+                <span class="span-or">or</span>
+            </div>
+            <a href="{{ url_for('register') }}" class="form-group">Register</a>
+
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+
+

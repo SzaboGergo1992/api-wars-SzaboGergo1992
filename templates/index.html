@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='JavaScript/apiwars.js')}}" defer></script>
+    <title>api wars</title>
+</head>
+<body>
+
+<div class="modal">
+    <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+    </div>
+</div>
+
+
+{% include 'navbar.html' %}
+
+
+<h1>Star Wars Universe Planets</h1>
+
+<div class="buttons">
+    <button id="previous">Previous</button>
+
+    <button id="next">Next</button><br>
+</div>
+
+<div class="table">
+    <table>
+
+    </table>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>api wars registration</title>
+</head>
+
+<body>
+
+{% include 'navbar.html' %}
+
+    <div class="wrapper">
+
+        <form class="register-group" action="" method="post">
+            <h2>Sign Up</h2>
+            {% if error == "taken" %}
+                <h3>Username is already taken!</h3>
+            {% endif %}
+            <div class="register-group">
+                <input type="text" class="form-control" name="username" minlength="3" aria-describedby="username" placeholder="Enter username">
+            </div>
+            <div class="register-group">
+                <input type="password" class="form-control" name="password" minlength="5" placeholder="Password">
+            </div>
+
+            <button type="submit" class="register-group">Sign Up</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

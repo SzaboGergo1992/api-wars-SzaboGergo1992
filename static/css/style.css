@@ -1,0 +1,168 @@
+header {
+    border-bottom-style: outset;
+
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+#sign {
+    float: right;
+    color: dimgray;
+}
+
+
+nav {
+    float: left;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 25px;
+    padding: 15px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: dimgray;
+}
+
+nav a:hover {
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+table tr td {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.headline {
+    border-bottom: 2px solid gray;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+.buttons {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+#previous {
+    color: white;
+    background-color: #63bbf2;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+#next {
+    color: white;
+    background-color: #1183ca;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.residentBtn {
+    border-radius: 4px;
+    padding: 4px;
+    background-color: #eeeeee;
+    border: 1px solid black;
+}
+
+.planet-residents {
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 5% auto;
+    padding: 20px;
+    width: max-content;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+    border-radius: 4px;
+    animation-name: modalOpen;
+    animation-duration: 1s;
+}
+
+.closeBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalOpen {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+
+.loginErr {
+    margin: 5% auto;
+    padding-left: 42%;
+}
+.loginErr h2 {
+    font-size: 40px;
+}
+
+.loginErr h3 {
+    font-size: 25px;
+}
+
+
+.wrapper {
+    margin: 5% auto;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 15%;
+    padding-bottom: 1%;
+}
+
+.span-or {
+    margin-left: 15%;
+}
+
+.form-group {
+    margin-left: 15%;
+}
+
+.register-group {
+    margin: 0 5%;
+}
