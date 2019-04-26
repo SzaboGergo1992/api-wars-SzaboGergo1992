@@ -11,7 +11,7 @@ app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=1)
 
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('sw-planetchecker.herokuapp.com', methods=['POST', 'GET'])
 def index():
     return render_template('index.html')
 
