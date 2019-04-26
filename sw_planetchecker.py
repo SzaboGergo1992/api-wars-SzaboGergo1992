@@ -69,7 +69,3 @@ def logout():
 @app.route('/loginerror')
 def loginerror():
     return render_template('loginerror.html')
-
-
-if __name__ == '__main__':
-    app.run(debug=True, port=8000)
